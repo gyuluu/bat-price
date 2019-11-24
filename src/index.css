@@ -1,0 +1,30 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.price {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 7rem;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.price-wrapper {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+  .price-wrapper {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .price {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+} 
