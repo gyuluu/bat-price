@@ -5,7 +5,6 @@ body {
 .price {
   font-family: 'Courier New', Courier, monospace;
   font-size: 7rem;
-  border: 1px solid black;
   padding: 20px;
 }
 

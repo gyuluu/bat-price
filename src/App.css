@@ -5,3 +5,7 @@
 .copy {
   font-style: italic;
 }
+
+.canvas-container {
+  height: 50vh;
+}
