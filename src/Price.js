@@ -4,6 +4,7 @@ import { Line } from 'react-chartjs-2';
 
 export default function Price() {
     const [price, setPrice] = useState(0);
+    const [change, setChange] = useState(0);
     const [arr, setArr] = useState([]);
     const [ts, setTs] = useState([]);
     const data = {
@@ -26,6 +27,7 @@ export default function Price() {
             axios.get("https://api.cryptonator.com/api/ticker/bat-usd").then(
             resp => {
                 setPrice(resp.data.ticker.price);
+                setChange(resp.data.ticker.change);
                 if (parseFloat(resp.data.ticker.price) !== arr[arr.length - 1]) {
                     let x = parseFloat(resp.data.ticker.price);
                     let y = parseInt(resp.data.timestamp);
@@ -49,6 +51,7 @@ export default function Price() {
         <div>
             <div className="w">
                 <div className="price">${price}</div>
+                <p className="change">Price (1h ago): ${price-change}</p>
             </div>  
             <div className="canvas-container">
                 <Line data={data} options={options}/>
